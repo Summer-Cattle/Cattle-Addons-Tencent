@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MetaData name="W_USER_TAG" comment="微信公众号用户标签" useCache="true">
+    <Fields>
+		<Field name="SOURCE" type="NString" comment="来源" length="50" allowNull="false"/>
+        <Field name="NAME" type="NString" comment="名称" length="100" allowNull="false"/>
+		<Field name="TAG_ID" type="Number" comment="标签Id" length="10" precision="0"/>
+    </Fields>
+    <Indexes>
+        <Index name="IDX_W_USER_TAG" unique="true" fields="SOURCE,NAME"/>
+    </Indexes>
+</MetaData>

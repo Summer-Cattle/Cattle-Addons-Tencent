@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MetaData name="W_USER_BIND" comment="微信用户绑定" useCache="true">
+    <Fields>
+		<Field name="SOURCE" type="NString" comment="来源" length="50" allowNull="false"/>
+        <Field name="MP_OPENID" type="NString" comment="小程序微信标识" length="100"/>
+		<Field name="OA_OPENID" type="NString" comment="公众号微信标识" length="100"/>
+		<Field name="UNIONID" type="NString" comment="微信标识" length="100"/>
+		<Field name="USER_TYPE" type="Number" comment="用户类型" length="3" precision="0"/>
+		<Field name="BIND_INFO" type="NString" comment="绑定信息" length="100"/>
+    </Fields>
+</MetaData>
