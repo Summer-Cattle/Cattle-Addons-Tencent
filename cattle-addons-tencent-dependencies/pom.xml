@@ -2,9 +2,9 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
-		<groupId>io.github.summercattle</groupId>
+		<groupId>com.gitlab.summer-cattle</groupId>
 		<artifactId>cattle-dependencies</artifactId>
-		<version>0.0.1.SP2</version>
+		<version>0.0.1.SP1</version>
 		<relativePath/>
 	</parent>
     <artifactId>cattle-addons-tencent-dependencies</artifactId>
@@ -12,7 +12,7 @@
 	<packaging>pom</packaging>
 	<name>${project.artifactId}</name>
     <description>Cattle Framework Addons For Tencent Build Dependencies</description>
-	<url>https://github.com/Summer-Cattle/Cattle-Addons-Tencent</url>
+	<url>https://gitlab.com/summer-cattle/cattle-addons-tencent</url>
     <licenses>
         <license>
             <name>Apache License, Version 2.0</name>
@@ -22,77 +22,50 @@
     </licenses>
     <organization>
         <name>Summer Cattle Team</name>
-        <url>https://github.com/Summer-Cattle</url>
+        <url>https://gitlab.com/summer-cattle</url>
     </organization>
 	<developers>
 		<developer>
+		    <id>juhua</id>
 			<name>juhua</name>
-			<url>https://github.com/Summer-Cattle</url>
+			<organization>Summer Cattle Team</organization>
+			<organizationUrl>https://gitlab.com/summer-cattle</organizationUrl>
+            <roles>
+                <role>developer</role>
+            </roles>
 		</developer>
 	</developers>
-	<scm>	
-		<url>https://github.com/Summer-Cattle/Cattle-Addons-Tencent.git</url>
-		<connection>scm:git:https://git@github.com/Summer-Cattle/Cattle-Addons-Tencent.git</connection>
+	<scm>
+	    <connection>scm:git:ssh://gitlab.com/summer-cattle/cattle-addons-tencent.git</connection>
+		<developerConnection>scm:git:ssh://git@gitlab.com:summer-cattle/cattle-addons-tencent.git</developerConnection>
+		<url>https://gitlab.com/summer-cattle/cattle-addons-tencent</url>	
 	</scm>
 	<properties>
         <cattle-addons-tencent.version>0.0.1</cattle-addons-tencent.version>
-	    <cattle-commons.version>0.0.1</cattle-commons.version>		
+	    <cattle-commons.version>0.0.1.SP1</cattle-commons.version>
 	</properties>
 	<dependencyManagement>
 	    <dependencies>
 		    <dependency>
-                <groupId>io.github.summercattle</groupId>
+                <groupId>com.gitlab.summer-cattle</groupId>
                 <artifactId>cattle-commons-dependencies</artifactId>
                 <version>${cattle-commons.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
 			</dependency>
 		    <dependency>
-			    <groupId>io.github.summercattle</groupId>
+			    <groupId>com.gitlab.summer-cattle</groupId>
 				<artifactId>cattle-addons-wechat-starter</artifactId>
 				<version>${cattle-addons-tencent.version}</version>
 			</dependency>			
         </dependencies>
 	</dependencyManagement>
 	<profiles>
-        <profile>
-		    <id>cattle</id>
+		<profile>
+            <id>central</id>
 			<activation>
 			    <activeByDefault>true</activeByDefault>
 			</activation>
-			<build>
-                <plugins>
-			        <plugin>
-                        <groupId>org.codehaus.mojo</groupId>
-                        <artifactId>flatten-maven-plugin</artifactId>
-					</plugin>
-	            </plugins>
-			</build>
-			<repositories>
-			    <repository>
-				    <id>cattle</id>
-					<url>https://maven.bokesoft.com/artifactory/maven-public</url>
-				</repository>
-			</repositories>
-			<pluginRepositories>
-			    <pluginRepository>
-				    <id>cattle</id>
-					<url>https://maven.bokesoft.com/artifactory/maven-public</url>
-				</pluginRepository>
-			</pluginRepositories>
-			<distributionManagement>
-			    <snapshotRepository>
-				    <id>cattle</id>
-					<url>https://maven.bokesoft.com/artifactory/libs-snapshot-local</url>
-				</snapshotRepository>
-				<repository>
-				    <id>cattle</id>
-					<url>https://maven.bokesoft.com/artifactory/libs-release-local</url>
-				</repository>
-			</distributionManagement>
-		</profile>
-		<profile>
-            <id>central</id>
 			<build>
                 <plugins>
 			        <plugin>

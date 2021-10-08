@@ -2,7 +2,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
-	    <groupId>io.github.summercattle</groupId>
+	    <groupId>com.gitlab.summer-cattle</groupId>
 	    <artifactId>cattle-addons-tencent</artifactId>
 		<version>0.0.1</version>
 	</parent>
@@ -10,7 +10,7 @@
     <packaging>jar</packaging>
 	<name>${project.artifactId}</name>
 	<description>Cattle Framework Addons WeChat Component</description>
-	<url>https://github.com/Summer-Cattle/Cattle-Addons-Tencent</url>
+	<url>https://gitlab.com/summer-cattle/cattle-addons-tencent</url>
     <licenses>
         <license>
             <name>Apache License, Version 2.0</name>
@@ -20,34 +20,44 @@
     </licenses>
     <organization>
         <name>Summer Cattle Team</name>
-        <url>https://github.com/Summer-Cattle</url>
+        <url>https://gitlab.com/summer-cattle</url>
     </organization>
 	<developers>
 		<developer>
+		    <id>juhua</id>
 			<name>juhua</name>
-			<url>https://github.com/Summer-Cattle</url>
+			<organization>Summer Cattle Team</organization>
+			<organizationUrl>https://gitlab.com/summer-cattle</organizationUrl>
+            <roles>
+                <role>developer</role>
+            </roles>
 		</developer>
 	</developers>
 	<scm>
-		<url>https://github.com/Summer-Cattle/Cattle-Addons-Tencent.git</url>
-		<connection>scm:git:https://git@github.com/Summer-Cattle/Cattle-Addons-Tencent.git</connection>
-	</scm>	
+	    <connection>scm:git:ssh://gitlab.com/summer-cattle/cattle-addons-tencent.git</connection>
+		<developerConnection>scm:git:ssh://git@gitlab.com:summer-cattle/cattle-addons-tencent.git</developerConnection>
+		<url>https://gitlab.com/summer-cattle/cattle-addons-tencent</url>	
+	</scm>
 	<dependencies>
 	    <dependency>
-		    <groupId>io.github.summercattle</groupId>
+		    <groupId>com.gitlab.summer-cattle</groupId>
 			<artifactId>cattle-commons-webmvc</artifactId>
 		</dependency>
 	    <dependency>
-		    <groupId>io.github.summercattle</groupId>
+		    <groupId>com.gitlab.summer-cattle</groupId>
 			<artifactId>cattle-commons-db</artifactId>
 		</dependency>
 	    <dependency>
-		    <groupId>io.github.summercattle</groupId>
+		    <groupId>com.gitlab.summer-cattle</groupId>
 			<artifactId>cattle-commons-utils</artifactId>
 		</dependency>
         <dependency>
-            <groupId>io.github.summercattle</groupId>
+            <groupId>com.gitlab.summer-cattle</groupId>
             <artifactId>cattle-commons-quartz</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-redis</artifactId>
         </dependency>
 	</dependencies>
 </project>

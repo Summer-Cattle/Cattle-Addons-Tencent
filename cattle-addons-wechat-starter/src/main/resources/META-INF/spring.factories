@@ -1,2 +1,2 @@
 org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
-io.github.summercattle.addons.wechat.configure.WeChatAutoConfiguration
+com.gitlab.summercattle.addons.wechat.configure.WeChatAutoConfiguration

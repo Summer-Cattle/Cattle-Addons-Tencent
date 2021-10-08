@@ -6,6 +6,6 @@
 		<Field name="TAG_ID" type="Number" comment="标签Id" length="10" precision="0"/>
     </Fields>
     <Indexes>
-        <Index name="IDX_W_USER_TAG" unique="true" fields="SOURCE,NAME"/>
+        <Index unique="true" fields="SOURCE,NAME"/>
     </Indexes>
 </MetaData>
