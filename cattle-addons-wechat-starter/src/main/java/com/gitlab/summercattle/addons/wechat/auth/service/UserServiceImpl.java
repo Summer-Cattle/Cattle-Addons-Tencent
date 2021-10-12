@@ -268,10 +268,10 @@ public class UserServiceImpl implements UserService {
 			if (dt.first()) {
 				String otherValue = dt.getString(otherField);
 				if (StringUtils.isNotBlank(session.getUnionId())) {
-					String strEnabled = SpringContext.getProperty("wechat.prod.enabled");
+					String strEnabled = SpringContext.getProperty(WeChatConstants.PROPERTY_PREFIX + ".prod.enabled");
 					boolean enabled = BooleanUtils.toBoolean(strEnabled);
 					if (!enabled) {
-						String url = SpringContext.getProperty("wechat.prod.url");
+						String url = SpringContext.getProperty(WeChatConstants.PROPERTY_PREFIX + ".prod.url");
 						if (StringUtils.isBlank(url)) {
 							throw new CommonException("微信后台地址为空");
 						}
